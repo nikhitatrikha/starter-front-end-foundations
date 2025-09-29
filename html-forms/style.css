@@ -1,7 +1,43 @@
+/* General body styling */
 body {
-  padding: 10px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-input {
-  margin: 5px;
+/* Style the form container */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style each input and textarea */
+input, textarea, select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
