@@ -1,18 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Front-end foundations: HTML forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Form</title>
+
+    <!-- Normalize CSS for cross-browser consistency -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
       type="text/css"
     />
+
+    <!-- External CSS file -->
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      /* Inline fallback styling in case style.css isn't loaded */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+
+      main {
+        max-width: 500px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      label,
+      legend {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input,
+      textarea,
+      select,
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      fieldset {
+        margin-top: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .note {
+        text-align: center;
+        font-size: 12px;
+        color: #888;
+        margin-top: 10px;
+      }
+    </style>
   </head>
 
   <body>
-    <main></main>
+    <main>
+      <h1>Contact Us</h1>
+      <form>
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <!-- Message Field -->
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Type your message here..."
+          required
+        ></textarea>
+
+        <!-- Optional: Radio Buttons -->
+        <fieldset>
+          <legend>Preferred Contact Method</legend>
+          <label>
+            <input type="radio" name="contactMethod" value="email" /> Email
+          </label>
+          <label>
+            <input type="radio" name="contactMethod" value="phone" /> Phone
+          </label>
+        </fieldset>
+
+        <!-- Optional: Dropdown Menu -->
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="reason">
+          <option value="general">General Inquiry</option>
+          <option value="support">Support</option>
+          <option value="feedback">Feedback</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="note">
+        <p>We'll get back to you within 2-3 business days.</p>
+      </div>
+    </main>
   </body>
 </html>
+
+
